@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="styles.css" />
+  <title>Typing Speed Test</title>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Typing Speed Test</h1>
+      <p>Improve your typing speed by practicing regularly.</p>
+    </div>
+
+    <!-- Difficulty buttons -->
+    <div class="difficulty-selector" id="difficultySelector">
+      <button class="difficulty-btn active" id="easyBtn" onclick="setDifficulty('easy')">Easy</button>
+      <button class="difficulty-btn" id="mediumBtn" onclick="setDifficulty('medium')">Medium</button>
+      <button class="difficulty-btn" id="hardBtn" onclick="setDifficulty('hard')">Hard</button>
+      <button class="difficulty-btn" id="secretBtn" onclick="setDifficulty('secret')">Secret</button>
+    </div>
+
+    <!-- Stats area -->
+    <div class="stats">
+      <div class="stat-box">
+        <div class="stat-label">Time</div>
+        <div class="stat-value" id="time">60</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-label">WPM</div>
+        <div class="stat-value" id="wpm">0</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-label">Accuracy</div>
+        <div class="stat-value" id="accuracy">100%</div>
+      </div>
+    </div>
+
+    <!-- Optional progress bar -->
+    <div class="progress-bar">
+      <div class="progress" id="progressBar"></div>
+    </div>
+
+    <!-- Word Display -->
+    <div class="word-display" id="wordDisplay"></div>
+
+    <!-- Congratulatory Message Area -->
+    <div class="message-container" id="messageContainer"></div>
+
+    <!-- Input field + buttons -->
+    <input type="text" class="input-field" id="input" placeholder="Type here..." disabled />
+    <div class="controls">
+      <button onclick="startTest()" id="startBtn">Start Test</button>
+      <button onclick="resetTest()" id="resetBtn" disabled>Reset</button>
+    </div>
+  </div>
+
+  <!-- JavaScript at the bottom -->
+  <script src="./index.js"></script>
+</body>
+</html>
